@@ -3,7 +3,8 @@ import { Grid } from "@material-ui/core";
 import youtube from './api/youtube';
 import SearchBar from './components/SearchBar';
 import VideoDetail from './components/VideoDetail';
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import VideoList from "./components/VideoList";
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
             <VideoDetail video={selectedVideo}/>
           </Grid>
           <Grid item xs={4}>
-            {/* {VideoList} */}
+            <VideoList videos={videos} onVideoSelect={setSelectedVideo}/>
           </Grid>
         </Grid>
       </Grid>
